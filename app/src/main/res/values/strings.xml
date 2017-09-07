@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">小框架</string>
     <string name="tv_home_number">账    号</string>
     <string name="tv_home_pwd">密    码</string>
     <string name="login_text">登录</string>
