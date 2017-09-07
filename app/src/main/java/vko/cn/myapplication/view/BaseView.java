@@ -5,6 +5,7 @@ package vko.cn.myapplication.view;
  */
 
 public interface BaseView {
+    //测试 这是我提交一个测试用的
     void showSuccess();
     void showFail();
 }
