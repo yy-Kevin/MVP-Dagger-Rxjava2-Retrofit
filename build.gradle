@@ -8,6 +8,8 @@ buildscript {
         classpath 'com.android.tools.build:gradle:2.3.0'
         //Dagger2
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        //lamdba
+        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
 //        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.1-2"
 //        classpath "org.jetbrains.kotlin:kotlin-android-extensions:1.0.1-2"
         // NOTE: Do not place your application dependencies here; they belong
