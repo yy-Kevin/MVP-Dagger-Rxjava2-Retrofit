@@ -2,13 +2,9 @@ package vko.cn.myapplication;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
-import javax.inject.Inject;
-
 import vko.cn.myapplication.activity.MainActivity;
 import vko.cn.myapplication.dagger2.DaggerLoginCompent;
 import vko.cn.myapplication.dagger2.LoginModule;

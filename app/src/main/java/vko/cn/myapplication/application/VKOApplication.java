@@ -7,6 +7,7 @@ import vko.cn.myapplication.utils.AppContextUtil;
 
 /**
  * Created by A on 2017/9/4.
+ * application
  */
 
 public class VKOApplication extends Application {
