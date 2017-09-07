@@ -1,9 +1,12 @@
 package vko.cn.myapplication.presenter;
 
+import android.content.Intent;
+
 import javax.inject.Inject;
 
 import vko.cn.myapplication.InterfaceContract;
 import vko.cn.myapplication.LoginActivity;
+import vko.cn.myapplication.activity.MainActivity;
 import vko.cn.myapplication.module.LoginModelImple;
 import vko.cn.myapplication.utils.LogUtils;
 import vko.cn.myapplication.utils.MD5Utils;
@@ -24,21 +27,21 @@ public class LoginPresenter extends BasePresenter<LoginActivity> implements Inte
     }
 
     public void login(){
-        String passWord = mView.getPassWord();
+        mView.startProgress();
         String userword = mView.getUserName();
-        passWord = MD5Utils.md5("jiumima230502");
-        userword = "15201083682";
-        LogUtils.d(this,"passWord = " + passWord);
+        String passWord = mView.getPassWord();
         modelImple.login(userword,passWord,this);
     }
 
     @Override
     public void LoginSucess() {
-        mView.showSuccess();
+        mView.stopProgress();
+        mView.loginSuccess();
     }
 
     @Override
     public void LoginFail() {
-        mView.showFail();
+        mView.stopProgress();
+        mView.loginFail();
     }
 }

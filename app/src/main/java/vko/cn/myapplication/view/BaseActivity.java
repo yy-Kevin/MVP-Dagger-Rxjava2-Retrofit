@@ -1,5 +1,6 @@
 package vko.cn.myapplication.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.widget.Toast;
 
 import javax.inject.Inject;
 
+import vko.cn.myapplication.activity.MainActivity;
 import vko.cn.myapplication.presenter.BasePresenter;
 
 /**
@@ -25,14 +27,16 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
     }
 
     public abstract void initPresenter();
+    public abstract void initView();
 
     @Override
-    public void showSuccess() {
+    public void startProgress() {
         Toast.makeText(this, "登陆成功", Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
-    public void showFail() {
+    public void stopProgress() {
         Toast.makeText(this, "登陆失败", Toast.LENGTH_SHORT).show();
     }
 }

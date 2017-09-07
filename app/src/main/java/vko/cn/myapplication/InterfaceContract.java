@@ -12,6 +12,8 @@ public class InterfaceContract {
     public interface LoginView extends BaseView {
         String getUserName();
         String getPassWord();
+        void loginSuccess();
+        void loginFail();
     }
 
     public interface Presenter<T extends BaseActivity> {

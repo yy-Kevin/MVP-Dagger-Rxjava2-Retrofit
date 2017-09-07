@@ -5,6 +5,6 @@ package vko.cn.myapplication.view;
  */
 
 public interface BaseView {
-    void showSuccess();
-    void showFail();
+    void startProgress();
+    void stopProgress();
 }
