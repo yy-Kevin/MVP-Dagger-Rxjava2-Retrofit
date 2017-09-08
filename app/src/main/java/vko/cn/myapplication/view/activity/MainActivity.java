@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.support.v7.app.ActionBar;
 import android.view.View;
+import android.view.WindowManager;
 
 
 import com.ashokvarma.bottomnavigation.BadgeItem;
@@ -35,7 +36,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+
         super.onCreate(savedInstanceState);
         initBottomNavigation();
         initToolbar();
@@ -85,6 +86,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
     }
 
     private void initToolbar(){
+        binding.mainInclude.tlToolbar.setTitle("动态");
         setSupportActionBar(binding.mainInclude.tlToolbar);
     }
     @Override
