@@ -51,8 +51,8 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
                 .setBackgroundColorResource(R.color.bar_accent_two)
                 .setBorderWidth(0);
         binding.mainBar.addItem(new BottomNavigationItem(R.mipmap.icon_one,R.string.tab_one).setActiveColorResource(R.color.bar_accent_one).setBadgeItem(badgeItem))
-                .addItem(new BottomNavigationItem(R.mipmap.icon_two, R.string.tab_two).setActiveColor(R.color.bar_accent_two))
-                .addItem(new BottomNavigationItem(R.mipmap.icon_three, R.string.tab_three).setActiveColor(R.color.bar_accent_three))
+                .addItem(new BottomNavigationItem(R.mipmap.icon_two, R.string.tab_two).setActiveColorResource(R.color.bar_accent_two))
+                .addItem(new BottomNavigationItem(R.mipmap.icon_three, R.string.tab_three).setActiveColorResource(R.color.bar_accent_three))
                 .setFirstSelectedPosition(lastSelectedPosition )
                 .initialise();
         binding.mainBar.setMode(BottomNavigationBar.MODE_FIXED);
@@ -65,6 +65,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
             case 0:
                 binding.mainVp.setCurrentItem(0);
 //                binding.mainBar.get   badgeItem.setText("9");
+                binding.mainBar.get
                 break;
             case 1:
                 binding.mainVp.setCurrentItem(1);
