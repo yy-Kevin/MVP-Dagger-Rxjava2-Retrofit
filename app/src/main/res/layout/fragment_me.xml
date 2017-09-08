@@ -2,9 +2,155 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bar_accent_three">
-    <TextView
+    android:background="#11000000">
+    <RelativeLayout
+        android:background="@color/bar_accent_three"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        >
+
+
+
+        <ImageView
+            android:padding="@dimen/dimen10"
+            android:id="@+id/iv_me_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/me_set"
+            />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dimen10"
+            android:id="@+id/iv_me_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/me_message"
+            />
+
+        <ImageView
+            android:layout_below="@id/iv_me_set"
+            android:paddingLeft="@dimen/dimen50"
+            android:src="@mipmap/my_i_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dimen30"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <ImageView
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_group_code"/>
+
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/my_white_right"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen140">
+
+
+    <LinearLayout
+        android:paddingTop="@dimen/dimen30"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dimen10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen80">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_me_couse"
+            android:src="@mipmap/me_couse"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:src="@mipmap/me_gongshi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_me_gongshi"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:src="@mipmap/me_wrongbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_me_wrongbook"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen45">
+        <TextView
+            android:textSize="@dimen/text_size_17"
+            android:paddingLeft="@dimen/dimen10"
+            android:textColor="#000"
+            android:id="@+id/tv_me_vb"
+            android:text="@string/tv_me_vb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="@dimen/text_size_15"
+            android:paddingLeft="@dimen/dimen10"
+            android:layout_below="@id/tv_me_vb"
+            android:text="@string/tv_me_vb_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/dimen10"
+            android:src="@mipmap/icon_unsing"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen25" />
+
+     </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="me  fragment"/>
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@mipmap/me_gradeset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="@dimen/text_size_18"
+                android:text="年级设置"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 </LinearLayout>
