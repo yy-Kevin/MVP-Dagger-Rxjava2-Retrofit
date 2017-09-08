@@ -7,5 +7,15 @@
     <string name="tab_two">学习</string>
     <string name="tab_three">我的</string>
     <string name="tv_me_vb">我的v币</string>
-    <string name="tv_me_vb_text">签到可以赚V币啦</string>
+    <string name="tv_me_vb_text">签到可以赚v币啦</string>
+    <string name="tv_me_object_text">我的课程</string>
+    <string name="tv_formula_shorthand_text">公式速记</string>
+    <string name="tv_The_wrong_question_text">错题本</string>
+    <string name="tv_grade_setting_text">年级设置</string>
+    <string name="tv_my_order_text">我的订单</string>
+    <string name="tv_my_collection_text">我的收藏</string>
+    <string name="tv_my_download_text">我的下载</string>
+    <string name="tv_member_center_text">会员中心</string>
+
+
 </resources>

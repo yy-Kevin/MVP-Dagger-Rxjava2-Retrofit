@@ -9,5 +9,7 @@
     <color name="bar_accent_one">#FF4081</color>
     <color name="bar_accent_two">#FF8144</color>
     <color name="bar_accent_three">#3F51B5</color>
+    <color name="text_color_black">#000000</color>
+
 
 </resources>
