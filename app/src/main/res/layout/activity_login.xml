@@ -40,6 +40,7 @@
                         android:textSize="16sp" />
 
                     <EditText
+                        android:text="15901407062"
                         android:id="@+id/et_user"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -71,6 +72,7 @@
                         android:textSize="16sp" />
 
                     <EditText
+                        android:text="123456"
                         android:id="@+id/et_pwd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
