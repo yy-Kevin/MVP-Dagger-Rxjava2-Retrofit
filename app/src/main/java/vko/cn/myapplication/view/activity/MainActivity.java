@@ -4,6 +4,9 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.Window;
 
 import com.ashokvarma.bottomnavigation.BadgeItem;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
@@ -26,8 +29,10 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         initBottomNavigation();
+        initToolbar();
     }
 
     @Override
@@ -44,6 +49,19 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
         binding.mainVp.setCurrentItem(0);
     }
 
+    //初始化Toolbar的布局
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    //设置Toorbar的点击事件
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+
     private void initBottomNavigation(){
         badgeItem = new BadgeItem();
         badgeItem.setHideOnSelect(false)
@@ -56,9 +74,13 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
                 .setFirstSelectedPosition(lastSelectedPosition )
                 .initialise();
         binding.mainBar.setMode(BottomNavigationBar.MODE_FIXED);
+        binding.mainBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
         binding.mainBar.setTabSelectedListener(this);
     }
 
+    private void initToolbar(){
+        setSupportActionBar(binding.mainInclude.tlToolbar);
+    }
     @Override
     public void onTabSelected(int position) {
         switch (position) {

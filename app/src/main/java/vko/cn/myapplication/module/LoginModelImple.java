@@ -31,9 +31,6 @@ public class LoginModelImple implements InterfaceContract.ILoginModule{
             @Override
             protected void onHandleSuccess(UserInfo userInfo) {
                 LogUtils.d(this,"userInfo.getToken() 1= " + userInfo.getToken());
-                LogUtils.d(this,"userInfo.getToken()2 = " + userInfo.getMsg());
-                LogUtils.d(this,"userInfo.getToken() 3= " + userInfo.getCode());
-                LogUtils.d(this,"userInfo.getToken() 3= " + userInfo.getName());
                 // 保存用户信息等操作
                 listener.LoginSucess();
             }
