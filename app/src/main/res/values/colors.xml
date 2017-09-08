@@ -5,6 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="login_gray">#0e0e0e</color>
     <color name="white">#ffffff</color>
-    <color name="login_btn_press">#678DCC</color>
+    <color name="login_btn_press">#ffffff</color>
+    <color name="bar_accent_one">#FF4081</color>
+    <color name="bar_accent_two">#FF8144</color>
+    <color name="bar_accent_three">#3F51B5</color>
 
 </resources>

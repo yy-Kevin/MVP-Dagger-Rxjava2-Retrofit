@@ -1,15 +1,11 @@
 package vko.cn.myapplication.presenter;
 
-import android.content.Intent;
-
 import javax.inject.Inject;
 
 import vko.cn.myapplication.InterfaceContract;
 import vko.cn.myapplication.LoginActivity;
-import vko.cn.myapplication.activity.MainActivity;
+import vko.cn.myapplication.view.activity.MainActivity;
 import vko.cn.myapplication.module.LoginModelImple;
-import vko.cn.myapplication.utils.LogUtils;
-import vko.cn.myapplication.utils.MD5Utils;
 
 /**
  * Created by A on 2017/9/4.

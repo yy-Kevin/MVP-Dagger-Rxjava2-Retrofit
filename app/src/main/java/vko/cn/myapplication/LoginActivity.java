@@ -5,7 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-import vko.cn.myapplication.activity.MainActivity;
+import vko.cn.myapplication.view.activity.MainActivity;
 import vko.cn.myapplication.dagger2.DaggerLoginCompent;
 import vko.cn.myapplication.dagger2.LoginModule;
 import vko.cn.myapplication.databinding.ActivityLoginBinding;

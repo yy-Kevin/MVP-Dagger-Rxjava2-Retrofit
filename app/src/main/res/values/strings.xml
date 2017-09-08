@@ -3,4 +3,7 @@
     <string name="tv_home_number">账    号</string>
     <string name="tv_home_pwd">密    码</string>
     <string name="login_text">登录</string>
+    <string name="tab_one">动态</string>
+    <string name="tab_two">学习</string>
+    <string name="tab_three">我的</string>
 </resources>
