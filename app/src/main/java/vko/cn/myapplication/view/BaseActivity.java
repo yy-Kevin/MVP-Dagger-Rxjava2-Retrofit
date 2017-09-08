@@ -32,11 +32,11 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
 
     @Override
     public void startProgress() {
-        Toast.makeText(this, "登陆成功", Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
     public void stopProgress() {
-        Toast.makeText(this, "登陆失败", Toast.LENGTH_SHORT).show();
+
     }
 }

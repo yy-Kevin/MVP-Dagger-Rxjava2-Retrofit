@@ -29,8 +29,9 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
 
     @Override
     public void onNext(BaseEntity<T> value) {
-        LogUtils.d(this,"value.getMsg() = " + value.getCode());
-        if (value.isSuccess()) {
+        LogUtils.d(this,"value.getcode() = " + value.getCode());
+        LogUtils.d(this,"value.getcode() = " + value.getMsg());
+        if (value.getMsg().isEmpty()) {
             T t = value.getData();
             onHandleSuccess(t);
         } else {
@@ -53,7 +54,6 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
     protected abstract void onHandleSuccess(T t);
 
     protected void onHandleError(String msg) {
-        mDisposable.dispose();
         Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
     }
 }
