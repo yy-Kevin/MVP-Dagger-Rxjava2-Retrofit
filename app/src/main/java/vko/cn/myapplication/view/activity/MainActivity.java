@@ -65,7 +65,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
             case 0:
                 binding.mainVp.setCurrentItem(0);
 //                binding.mainBar.get   badgeItem.setText("9");
-                binding.mainBar.get
+//                binding.mainBar.get
                 break;
             case 1:
                 binding.mainVp.setCurrentItem(1);
