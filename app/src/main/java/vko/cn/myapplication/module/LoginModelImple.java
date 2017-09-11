@@ -15,6 +15,7 @@ import vko.cn.myapplication.application.VKOApplication;
 import vko.cn.myapplication.module.bean.BaseEntity;
 import vko.cn.myapplication.module.bean.UserInfo;
 import vko.cn.myapplication.utils.LogUtils;
+import vko.cn.myapplication.utils.SPUtils;
 
 /**
  * Created by A on 2017/9/4.
@@ -31,6 +32,7 @@ public class LoginModelImple implements InterfaceContract.ILoginModule{
             @Override
             protected void onHandleSuccess(UserInfo userInfo) {
                 LogUtils.d(this,"userInfo.getToken() 1= " + userInfo.getToken());
+                SPUtils.put(VKOApplication.getInstance(),"user_token",userInfo.getToken());
                 // 保存用户信息等操作
                 listener.LoginSucess();
             }
