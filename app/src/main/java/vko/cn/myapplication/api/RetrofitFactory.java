@@ -1,8 +1,5 @@
 package vko.cn.myapplication.api;
 
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +15,6 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import vko.cn.myapplication.application.VKOApplication;
-import vko.cn.myapplication.module.bean.UserInfo;
 import vko.cn.myapplication.utils.NetUtil;
 
 /**

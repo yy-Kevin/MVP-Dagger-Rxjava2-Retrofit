@@ -20,6 +20,23 @@
         </activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".view.activity.MainActivity"></activity>
+
+        <!-- 配置APP ID -->
+        <!--<meta-data-->
+            <!--android:name="BUGLY_APPID"-->
+            <!--android:value="2e53182877" />-->
+        <!--&lt;!&ndash;&lt;!&ndash; 配置APP版本号 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<meta-data&ndash;&gt;-->
+            <!--&lt;!&ndash;android:name="BUGLY_APP_VERSION"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:value="<APP_Version>" />&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash; 配置APP渠道号 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<meta-data&ndash;&gt;-->
+            <!--&lt;!&ndash;android:name="BUGLY_APP_CHANNEL"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:value="<APP_Channel>" />&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash; 配置Bugly调试模式（true或者false）&ndash;&gt;&ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="BUGLY_ENABLE_DEBUG"-->
+            <!--android:value="false" />-->
     </application>
 
 </manifest>

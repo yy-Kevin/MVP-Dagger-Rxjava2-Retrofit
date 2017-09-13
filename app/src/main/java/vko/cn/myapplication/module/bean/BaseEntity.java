@@ -1,6 +1,5 @@
 package vko.cn.myapplication.module.bean;
 
-import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 

@@ -1,12 +1,9 @@
 package vko.cn.myapplication.module;
 
 import android.content.Context;
-import android.util.Log;
 
 
 import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 import vko.cn.myapplication.InterfaceContract;
 import vko.cn.myapplication.api.BaseObserver;
 import vko.cn.myapplication.api.RetrofitFactory;
@@ -26,26 +23,15 @@ public class LoginModelImple implements InterfaceContract.ILoginModule{
     @Override
     public void login(String userName, String passWord, final InterfaceContract.OnLoginListener listener) {
         Observable<BaseEntity<UserInfo>> observable = RetrofitFactory.builder().getService().login(userName,passWord);
-        BaseObserver observer = new BaseObserver<UserInfo>(VKOApplication.getInstance()) {
-            public static final String TAG ="LoginModelImple" ;
-
+        observable.compose(RxSchedulers.compose()).subscribe(new BaseObserver<UserInfo>(VKOApplication.getInstance()) {
             @Override
             protected void onHandleSuccess(UserInfo userInfo) {
-                LogUtils.d(this,"userInfo.getToken() 1= " + userInfo.getToken());
+                LogUtils.d(this,"登陆请求的回调-------");
+                LogUtils.d(this,"userInfo.getToken() = " + userInfo.getToken());
                 SPUtils.put(VKOApplication.getInstance(),"user_token",userInfo.getToken());
                 // 保存用户信息等操作
                 listener.LoginSucess();
             }
-            @Override
-            public void onError(Throwable e) {
-                super.onError(e);
-                Log.e(TAG, "error:" + e.toString());
-            }
-        };
-
-//        observable.compose(RxSchedulers.compose()).subscribe(observer);
-        observable.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(observer);
+        });
     }
 }

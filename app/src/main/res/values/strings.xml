@@ -16,6 +16,6 @@
     <string name="tv_my_collection_text">我的收藏</string>
     <string name="tv_my_download_text">我的下载</string>
     <string name="tv_member_center_text">会员中心</string>
-
+    <string name="forget_password">忘记密码</string>
 
 </resources>

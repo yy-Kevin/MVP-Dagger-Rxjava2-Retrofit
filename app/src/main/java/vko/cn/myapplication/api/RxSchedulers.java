@@ -1,15 +1,11 @@
 package vko.cn.myapplication.api;
 
-import android.widget.Toast;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
-import vko.cn.myapplication.R;
 
 /**
  * Created by A on 2017/9/4.

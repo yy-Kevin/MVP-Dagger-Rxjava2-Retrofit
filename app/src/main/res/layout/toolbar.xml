@@ -9,4 +9,12 @@
     android:minHeight="?attr/actionBarSize"
     android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        />
 </android.support.v7.widget.Toolbar></layout>

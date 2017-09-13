@@ -12,6 +12,8 @@ import android.view.WindowManager;
 
 import javax.inject.Inject;
 
+import vko.cn.myapplication.application.VKOApplication;
+import vko.cn.myapplication.utils.ProgressDlgUtil;
 import vko.cn.myapplication.view.activity.MainActivity;
 import vko.cn.myapplication.presenter.BasePresenter;
 
@@ -46,11 +48,13 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
 
     @Override
     public void startProgress() {
-
+        if (!ProgressDlgUtil.isShowing()){
+            ProgressDlgUtil.showSuccinctProgress(this,"正在验证中...",2,false,false);
+        }
     }
 
     @Override
     public void stopProgress() {
-
+        ProgressDlgUtil.dismiss();
     }
 }

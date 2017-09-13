@@ -7,15 +7,15 @@
         android:title="action_search"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/action_share"
-        android:orderInCategory="90"
-        android:title="action_share"
-        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"
-        app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="action_settings"
-        app:showAsAction="never"/>
+    <!--<item-->
+        <!--android:id="@+id/action_share"-->
+        <!--android:orderInCategory="90"-->
+        <!--android:title="action_share"-->
+        <!--app:actionProviderClass="android.support.v7.widget.ShareActionProvider"-->
+        <!--app:showAsAction="ifRoom"/>-->
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="action_settings"-->
+        <!--app:showAsAction="never"/>-->
 </menu>

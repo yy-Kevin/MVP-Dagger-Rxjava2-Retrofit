@@ -41,7 +41,6 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
 
     @Override
     public void onError(Throwable e) {
-
         Log.e(TAG, "error:" + e.toString());
     }
 

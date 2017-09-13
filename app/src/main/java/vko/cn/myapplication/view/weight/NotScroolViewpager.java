@@ -10,28 +10,52 @@ import android.view.MotionEvent;
  */
 
 public class NotScroolViewpager extends ViewPager {
-    private boolean isPagingEnabled = true;
+    private boolean noScroll = false;
+
+    public NotScroolViewpager(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        // TODO Auto-generated constructor stub
+    }
 
     public NotScroolViewpager(Context context) {
         super(context);
     }
 
-    public NotScroolViewpager(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public void setNoScroll(boolean noScroll) {
+        this.noScroll = noScroll;
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return this.isPagingEnabled && super.onTouchEvent(event);
+    public void scrollTo(int x, int y) {
+        super.scrollTo(x, y);
     }
 
     @Override
-    public boolean onInterceptTouchEvent(MotionEvent event) {
-        return this.isPagingEnabled && super.onInterceptTouchEvent(event);
+    public boolean onTouchEvent(MotionEvent arg0) {
+		/* return false;//super.onTouchEvent(arg0); */
+        if (noScroll)
+            return false;
+        else
+            return super.onTouchEvent(arg0);
     }
 
-    public void setPagingEnabled(boolean b) {
-        this.isPagingEnabled = b;
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent arg0) {
+        if (noScroll)
+            return false;
+        else
+            return super.onInterceptTouchEvent(arg0);
     }
+
+    @Override
+    public void setCurrentItem(int item, boolean smoothScroll) {
+        super.setCurrentItem(item, smoothScroll);
+    }
+
+    @Override
+    public void setCurrentItem(int item) {
+        super.setCurrentItem(item);
+    }
+
 }
 
